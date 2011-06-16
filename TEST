@@ -1,0 +1,14 @@
+minLength: 2,
+            select: function( event, ui ) {
+            //add location
+            $("#location").hide();            
+            $("#edit").show();    
+            $("#saved_location").append( ui.item ? ui.item.label :
+                    "Nothing selected");
+            //add to hidden inputs location country, latitude, and longitude
+            $("#country").val( ui.item.saved_country );
+            $("#city").val( ui.item.saved_city );
+            $("#lat").val( ui.item.saved_latitude );
+            $("#lng").val( ui.item.saved_longitude );
+            },                        
+            open: function() {
